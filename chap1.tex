@@ -126,9 +126,7 @@ $\textbf{(}C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJE
 		 X7 \rightarrow bouteille X13\\
 		 X13 \rightarrow ADMIS \hspace{1mm} X17 + EJECT \hspace{1mm} X18\\
 		 X17 \rightarrow  \varepsilon\\
-		 X18 \rightarrow \varepsilon\\
-		 X41 \rightarrow \overline{C6} X42\\
-		 X42 \rightarrow \overline{A3} X0\\\\ $
+		 X18 \rightarrow \varepsilon\\\\ $
 		 Ou oncore :\\
 		 $X8 \rightarrow \overline{C4} X9\\
 		 X9 \rightarrow C5 X10\\
@@ -137,9 +135,7 @@ $\textbf{(}C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJE
 		 X12 \rightarrow bouchon X14 + \varepsilon\\
 		 X14 \rightarrow ADMIS \hspace{1mm} X15 + EJECT \hspace{1mm} X16\\
 		 X15 \rightarrow \varepsilon\\
-		 X16 \rightarrow \varepsilon\\
-		 X39 \rightarrow \overline{C6} X40\\
-		 X40 \rightarrow \overline{A3} X0\\\\ $
+		 X16 \rightarrow \varepsilon\\\\ $
 		 Mais aussi : \\
 		 $X19 \rightarrow \overline{C7} X20\\
 		 X20 \rightarrow C4 X21\\
@@ -160,17 +156,23 @@ $\textbf{(}C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJE
 		 X35 \rightarrow assemblage X36\\
 		 X36 \rightarrow ADMIS \hspace{1mm} X37 + EJECT \hspace{1mm} X38\\
 		 X37 \rightarrow \varepsilon\\
-		 X38 \rightarrow \varepsilon\\
-		 X43 \rightarrow \overline{C6} X44\\
-		 X44 \rightarrow \overline{A3} X0\\\\ $
+		 X38 \rightarrow \varepsilon\\\\ $
 		 
 		 Après réduction on trouve : \\[0.25 cm]
-		 $X1 \rightarrow  \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille EJECT \hspace{1mm} A3 \overline{C6A3} X0 + \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteilleADMIS\\\\ $
+		 $X1 \rightarrow  \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille (ADMIS \hspace{1mm} + \hspace{1mm} EJECT) \\\\ $
+		 
+		 $X8 \rightarrow \overline{C4} C5 \overline{C5} C6 bouchon (ADMIS \hspace{1mm} + \hspace{1mm} EJECT) \\\\ $
+		 
+
+		$X19 \rightarrow  \overline{C7} C4 \overline{C4} (C8C5( \overline{C8} \overline{C5} C6 assemblage (ADMIS \hspace{1mm} + \hspace{1mm} EJECT) \overline{C5} \overline{C8} C6 assemblage (ADMIS \hspace{1mm} + \hspace{1mm} EJECT) ) C5C8( \overline{C8} \overline{C5} C6 assemblage (ADMIS \hspace{1mm} + \hspace{1mm} EJECT) \overline{C5} \overline{C8} C6 assemblage (ADMIS \hspace{1mm} + \hspace{1mm} EJECT) ))  \\\\ $		 
+		 
 		
+		 
 		 %$X8 \rightarrow \overline{C7} X2$
 		 
 		 Enfin l'expression régulière du langage marqué reconnu par l'automate s'écrit comme suit : \\
-		 
+		  
+		 $ER1_{M} = C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille (ADMIS \hspace{1mm} + \hspace{1mm} EJECT)\\+ C7 \overline{C7} C4 \overline{C4} (C8C5( \overline{C8} \overline{C5} C6 assemblage (ADMIS \hspace{1mm} + \hspace{1mm} EJECT)\\ \overline{C5} \overline{C8} C6 assemblage (ADMIS \hspace{1mm} + \hspace{1mm} EJECT) ) C5C8( \overline{C8} \overline{C5} C6 assemblage \\(ADMIS \hspace{1mm} + \hspace{1mm} EJECT) \overline{C5} \overline{C8} C6 assemblage (ADMIS \hspace{1mm} + \hspace{1mm} EJECT) ))+ \\ C4 \overline{C4} C5 \overline{C5} C6 bouchon (ADMIS \hspace{1mm} + \hspace{1mm} EJECT) \\\\ $
 		 
 		 
 		% \pagebreak 
@@ -226,7 +228,7 @@ $\textbf{(}C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJE
 		 X43 \rightarrow \overline{C6} X44\\
 		 X44 \rightarrow \overline{A3} X0\\\\ $
    				
-		Enfin l'expression régulière du langage marqué reconnu par l'automate s'écrit comme suit : \\		
+		%Enfin l'expression régulière du langage marqué reconnu par l'automate s'écrit comme suit : \\		
 		
 	 \pagebreak
 
@@ -273,12 +275,14 @@ $\textbf{(}C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJE
 		 \chapter{\textsc{Simplification des commandes}}
 		 
 		 \par Afin de simplifier les commandes, on doit passer par un $TRIM$ pour ne garder que les états accessibles et les états co-accessibles, il faut aussi transformer la commande en $automate \hspace{1mm} de \hspace{1mm} Moore$ pour que la sortie puisse dépendre de l'état en cours.\\
+		 
+		 \par Les entrées $bouchon, \hspace{1mm} bouteille $ et $assemblage$ et les sorties $ADMIS$ et $EJECT$ ont été ajoutées afin de faciliter la modélisation des objectifs, or le logiciel UNITY ne reconnait pas les entrées et les sorties citées précédemment, donc pour réussir à tester la maquette on doit les éliminer et éliminer leurs états correspondant dans le modèle du produit parallèle entre le pocédé et l'objectif.  
 		  
 		 
 		  \section{\textsc{La première commande simplifiée}}
 		  
 		    \begin{center}
-			\includegraphics[scale=0.275]{com1s.png}
+			\includegraphics[scale=0.275]{com1ss.png}
 			\captionof{figure}{\textit{La première commande simplifiée modélisée sous SEDMA}}
 			\label{fig8}
 			\end{center}	
@@ -286,7 +290,7 @@ $\textbf{(}C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJE
 		  \section{\textsc{La seconde commande simplifiée}}
 			
 			\begin{center}
-			\includegraphics[scale=0.15]{com2s.png}
+			\includegraphics[scale=0.15]{com2ss.png}
 			\captionof{figure}{\textit{La seconde commande simplifiée modélisée sous SEDMA}}
 			\label{fig9}
 			\end{center}	
