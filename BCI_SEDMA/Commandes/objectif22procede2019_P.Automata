@@ -1,0 +1,570 @@
+toute ligne ne debutant pas par un caractere # est ignoree
+*******************************************************
+fichier de sauvegarde du fichier automate : objectif22procede2019_P
+Date : jeudi 3 janvier 2019 à 21:08:32
+********************************************************
+
+Peut être edite quand le graphe automate n'est pas ouvert dans SEDMA,
+Il est vivement deconseille de modifier ce fichier ! 
+
+#NAME objectif22procede2019_P
+#PROJECT BCI
+#TYPEGRAPHE Automata
+
+debut de la description de l'automate
+
+<s> <int x> <int y> <nom (index)> <ancre> <{attribut}> <ancre> <initial> <final> <couleur> <nom>
+
+#s 927 1586 0 c {} s false false #000000 E1E0
+#s 1241 1511 1 c {} s false false #000000 E1E1
+#s 1554 1511 2 c {} s false false #000000 E1E2
+#s 1856 1511 3 c {} s false false #000000 E1E3
+#s 2156 1511 4 c {} s false false #000000 E1E4
+#s 2456 1511 5 c {} s false false #000000 E1E5
+#s 2756 1511 6 c {} s false false #000000 E1E6
+#s 3057 1511 7 c {} s false false #000000 E1E7
+#s 1241 1586 8 c {} s false false #000000 E1E8
+#s 1554 1586 9 c {} s false false #000000 E1E9
+#s 1856 1586 10 c {} s false false #000000 E1E10
+#s 2156 1586 11 c {} s false false #000000 E1E11
+#s 2456 1586 12 c {} s false false #000000 E1E12
+#s 3057 1235 13 c {} s false false #000000 E1E13
+#s 3057 1140 14 c {} s false false #000000 E1E14
+#s 627 1403 15 c {} s false false #000000 E1E15
+#s 25 1628 16 c {} s false false #000000 E1E16
+#s 627 1478 17 c {} s false false #000000 E1E17
+#s 25 1703 18 c {} s false false #000000 E1E18
+#s 1241 1661 19 c {} s false false #000000 E1E19
+#s 1554 1661 20 c {} s false false #000000 E1E20
+#s 1856 1661 21 c {} s false false #000000 E1E21
+#s 2156 1661 22 c {} s false false #000000 E1E22
+#s 2456 1661 23 c {} s false false #000000 E1E23
+#s 2456 1736 24 c {} s false false #000000 E1E24
+#s 2756 1661 25 c {} s false false #000000 E1E25
+#s 3057 1586 26 c {} s false false #000000 E1E27
+#s 3057 1661 27 c {} s false false #000000 E1E28
+#s 3057 1736 28 c {} s false false #000000 E1E29
+#s 3057 1811 29 c {} s false false #000000 E1E30
+#s 3357 1661 30 c {} s false false #000000 E1E31
+#s 3357 1586 31 c {} s false false #000000 E1E32
+#s 3357 1736 32 c {} s false false #000000 E1E33
+#s 3357 1811 33 c {} s false false #000000 E1E34
+#s 3657 1695 34 c {} s false false #000000 E1E35
+#s 3057 1329 35 c {} s false false #000000 E1E36
+#s 627 1553 36 c {} s false false #000000 E1E37
+#s 25 1778 37 c {} s false false #000000 E1E38
+#s 327 1628 38 c {} s false false #000000 E1E39
+#s 627 1628 39 c {} s false false #000000 E1E40
+#s 2756 1736 40 c {} s false false #000000 E1E26
+#s 327 1703 41 c {} s false false #000000 E1E41
+#s 627 1703 42 c {} s false false #000000 E1E42
+#s 327 1778 43 c {} s false false #000000 E1E43
+#s 627 1778 44 c {} s false false #000000 E1E44
+#s 3657 1292 45 c {} s false false #000000 E2E0
+#s 3957 1153 46 c {} s false false #000000 E2E1
+#s 4259 1143 47 c {} s false false #000000 E2E2
+#s 4559 1142 48 c {} s false false #000000 E2E3
+#s 4859 1142 49 c {} s false false #000000 E2E4
+#s 5159 1142 50 c {} s false false #000000 E2E5
+#s 5460 1142 51 c {} s false false #000000 E2E6
+#s 5760 1142 52 c {} s false false #000000 E2E7
+#s 3957 1292 53 c {} s false false #000000 E2E8
+#s 4259 1292 54 c {} s false false #000000 E2E9
+#s 4559 1292 55 c {} s false false #000000 E2E10
+#s 4859 1292 56 c {} s false false #000000 E2E11
+#s 5159 1292 57 c {} s false false #000000 E2E12
+#s 25 1853 58 c {} s false false #000000 E2E13
+#s 25 1928 59 c {} s false false #000000 E2E14
+#s 3357 1150 60 c {} s false false #000000 E2E15
+#s 5760 1297 61 c {} s false false #000000 E2E16
+#s 3357 1235 62 c {} s false false #000000 E2E17
+#s 2756 1424 63 c {} s false false #000000 E2E18
+#s 3957 1431 64 c {} s false false #000000 E2E19
+#s 4259 1454 65 c {} s false false #000000 E2E20
+#s 4559 1468 66 c {} s false false #000000 E2E21
+#s 4859 1472 67 c {} s false false #000000 E2E22
+#s 5159 1472 68 c {} s false false #000000 E2E23
+#s 5159 1565 69 c {} s false false #000000 E2E24
+#s 5460 1472 70 c {} s false false #000000 E2E25
+#s 5760 1506 71 c {} s false false #000000 E2E27
+#s 5760 1431 72 c {} s false false #000000 E2E28
+#s 5760 1581 73 c {} s false false #000000 E2E29
+#s 5760 1656 74 c {} s false false #000000 E2E30
+#s 6060 1431 75 c {} s false false #000000 E2E31
+#s 6060 1506 76 c {} s false false #000000 E2E32
+#s 6060 1581 77 c {} s false false #000000 E2E33
+#s 6060 1656 78 c {} s false false #000000 E2E34
+#s 6360 1506 79 c {} s false false #000000 E2E35
+#s 25 2003 80 c {} s false false #000000 E2E36
+#s 3357 1320 81 c {} s false false #000000 E2E37
+#s 6761 1335 82 c {} s false false #000000 E2E38
+#s 6060 1301 83 c {} s false false #000000 E2E39
+#s 6360 1339 84 c {} s false false #000000 E2E40
+#s 5460 1581 85 c {} s false false #000000 E2E26
+#s 3057 1424 86 c {} s false false #000000 E2E41
+#s 3357 1408 87 c {} s false false #000000 E2E42
+#s 6576 1285 88 c {} s false false #000000 E2E43
+#s 6401 1206 89 c {} s false false #000000 E2E44
+#s 1241 1000 90 c {} s true true #000000 E0E0
+#s 1554 958 91 c {} s false false #000000 E0E1
+#s 1856 950 92 c {} s false false #000000 E0E2
+#s 2156 949 93 c {} s false false #000000 E0E3
+#s 2456 947 94 c {} s false false #000000 E0E4
+#s 2756 947 95 c {} s false false #000000 E0E5
+#s 3057 947 96 c {} s false false #000000 E0E6
+#s 3357 947 97 c {} s false false #000000 E0E7
+#s 1554 1140 98 c {} s false false #000000 E0E8
+#s 1856 1140 99 c {} s false false #000000 E0E9
+#s 2156 1140 100 c {} s false false #000000 E0E10
+#s 2456 1140 101 c {} s false false #000000 E0E11
+#s 2756 1140 102 c {} s false false #000000 E0E12
+#s 25 2078 103 c {} s false false #000000 E0E13
+#s 25 2153 104 c {} s false false #000000 E0E14
+#s 927 965 105 c {} s false false #000000 E0E15
+#s 327 1135 106 c {} s false false #000000 E0E16
+#s 6360 1104 107 c {} s false false #000000 E0E17
+#s 3957 947 108 c {} s false false #000000 E0E18
+#s 1554 793 109 c {} s false false #000000 E0E19
+#s 1856 756 110 c {} s false false #000000 E0E20
+#s 2156 747 111 c {} s false false #000000 E0E21
+#s 2456 745 112 c {} s false false #000000 E0E22
+#s 2756 670 113 c {} s false false #000000 E0E23
+#s 2756 745 114 c {} s false false #000000 E0E24
+#s 3057 670 115 c {} s false false #000000 E0E25
+#s 3357 595 116 c {} s false false #000000 E0E27
+#s 3357 670 117 c {} s false false #000000 E0E28
+#s 3357 745 118 c {} s false false #000000 E0E29
+#s 3357 820 119 c {} s false false #000000 E0E30
+#s 3657 670 120 c {} s false false #000000 E0E31
+#s 3657 595 121 c {} s false false #000000 E0E32
+#s 3657 745 122 c {} s false false #000000 E0E33
+#s 3657 820 123 c {} s false false #000000 E0E34
+#s 3957 745 124 c {} s false false #000000 E0E35
+#s 25 2228 125 c {} s false false #000000 E0E36
+#s 927 1040 126 c {} s false false #000000 E0E37
+#s 4559 831 127 c {} s false false #000000 E0E38
+#s 627 1135 128 c {} s false false #000000 E0E39
+#s 927 1125 129 c {} s false false #000000 E0E40
+#s 3057 745 130 c {} s false false #000000 E0E26
+#s 4259 947 131 c {} s false false #000000 E0E41
+#s 4559 911 132 c {} s false false #000000 E0E42
+#s 4859 926 133 c {} s false false #000000 E0E43
+#s 5159 983 134 c {} s false false #000000 E0E44
+#s 927 2261 135 c {} s false false #000000 E3E0
+#s 1241 2186 136 c {} s false false #000000 E3E1
+#s 1554 2186 137 c {} s false false #000000 E3E2
+#s 1856 2186 138 c {} s false false #000000 E3E3
+#s 2156 2186 139 c {} s false false #000000 E3E4
+#s 2456 2186 140 c {} s false false #000000 E3E5
+#s 2756 2186 141 c {} s false false #000000 E3E6
+#s 3057 2186 142 c {} s false false #000000 E3E7
+#s 1241 2261 143 c {} s false false #000000 E3E8
+#s 1554 2261 144 c {} s false false #000000 E3E9
+#s 1856 2261 145 c {} s false false #000000 E3E10
+#s 2156 2261 146 c {} s false false #000000 E3E11
+#s 2456 2261 147 c {} s false false #000000 E3E12
+#s 6060 1140 148 c {} s false false #000000 E3E13
+#s 627 946 149 c {} s false false #000000 E3E14
+#s 627 2078 150 c {} s false false #000000 E3E15
+#s 25 2303 151 c {} s false false #000000 E3E16
+#s 627 2153 152 c {} s false false #000000 E3E17
+#s 25 2378 153 c {} s false false #000000 E3E18
+#s 1241 2336 154 c {} s false false #000000 E3E19
+#s 1554 2336 155 c {} s false false #000000 E3E20
+#s 1856 2336 156 c {} s false false #000000 E3E21
+#s 2156 2336 157 c {} s false false #000000 E3E22
+#s 2456 2336 158 c {} s false false #000000 E3E23
+#s 2456 2411 159 c {} s false false #000000 E3E24
+#s 2756 2336 160 c {} s false false #000000 E3E25
+#s 3057 2261 161 c {} s false false #000000 E3E27
+#s 3057 2336 162 c {} s false false #000000 E3E28
+#s 3057 2411 163 c {} s false false #000000 E3E29
+#s 3057 2486 164 c {} s false false #000000 E3E30
+#s 3357 2336 165 c {} s false false #000000 E3E31
+#s 3357 2261 166 c {} s false false #000000 E3E32
+#s 3357 2411 167 c {} s false false #000000 E3E33
+#s 3357 2486 168 c {} s false false #000000 E3E34
+#s 3657 2371 169 c {} s false false #000000 E3E35
+#s 627 1040 170 c {} s false false #000000 E3E36
+#s 627 2228 171 c {} s false false #000000 E3E37
+#s 25 2453 172 c {} s false false #000000 E3E38
+#s 327 2303 173 c {} s false false #000000 E3E39
+#s 627 2303 174 c {} s false false #000000 E3E40
+#s 2756 2411 175 c {} s false false #000000 E3E26
+#s 327 2378 176 c {} s false false #000000 E3E41
+#s 627 2378 177 c {} s false false #000000 E3E42
+#s 327 2453 178 c {} s false false #000000 E3E43
+#s 627 2453 179 c {} s false false #000000 E3E44
+#s 927 2743 180 c {} s false false #000000 E4E0
+#s 1241 2668 181 c {} s false false #000000 E4E1
+#s 1554 2668 182 c {} s false false #000000 E4E2
+#s 1856 2668 183 c {} s false false #000000 E4E3
+#s 2156 2668 184 c {} s false false #000000 E4E4
+#s 2456 2668 185 c {} s false false #000000 E4E5
+#s 2756 2668 186 c {} s false false #000000 E4E6
+#s 3057 2668 187 c {} s false false #000000 E4E7
+#s 1241 2743 188 c {} s false false #000000 E4E8
+#s 1554 2743 189 c {} s false false #000000 E4E9
+#s 1856 2743 190 c {} s false false #000000 E4E10
+#s 2156 2743 191 c {} s false false #000000 E4E11
+#s 2456 2743 192 c {} s false false #000000 E4E12
+#s 2456 1424 193 c {} s false false #000000 E4E13
+#s 5460 1292 194 c {} s false false #000000 E4E14
+#s 627 2528 195 c {} s false false #000000 E4E15
+#s 25 2753 196 c {} s false false #000000 E4E16
+#s 627 2603 197 c {} s false false #000000 E4E17
+#s 25 2828 198 c {} s false false #000000 E4E18
+#s 1241 2818 199 c {} s false false #000000 E4E19
+#s 1554 2818 200 c {} s false false #000000 E4E20
+#s 1856 2818 201 c {} s false false #000000 E4E21
+#s 2156 2818 202 c {} s false false #000000 E4E22
+#s 2456 2818 203 c {} s false false #000000 E4E23
+#s 2456 2893 204 c {} s false false #000000 E4E24
+#s 2756 2818 205 c {} s false false #000000 E4E25
+#s 3057 2743 206 c {} s false false #000000 E4E27
+#s 3057 2818 207 c {} s false false #000000 E4E28
+#s 3057 2893 208 c {} s false false #000000 E4E29
+#s 3057 2968 209 c {} s false false #000000 E4E30
+#s 3357 2818 210 c {} s false false #000000 E4E31
+#s 3357 2743 211 c {} s false false #000000 E4E32
+#s 3357 2893 212 c {} s false false #000000 E4E33
+#s 3357 2968 213 c {} s false false #000000 E4E34
+#s 3657 2853 214 c {} s false false #000000 E4E35
+#s 6571 1435 215 c {} s false false #000000 E4E36
+#s 627 2678 216 c {} s false false #000000 E4E37
+#s 25 2903 217 c {} s false false #000000 E4E38
+#s 327 2753 218 c {} s false false #000000 E4E39
+#s 627 2753 219 c {} s false false #000000 E4E40
+#s 2756 2893 220 c {} s false false #000000 E4E26
+#s 327 2828 221 c {} s false false #000000 E4E41
+#s 627 2828 222 c {} s false false #000000 E4E42
+#s 327 2903 223 c {} s false false #000000 E4E43
+#s 627 2903 224 c {} s false false #000000 E4E44
+#s 927 3128 225 c {} s false false #000000 E5E0
+#s 1241 3053 226 c {} s false false #000000 E5E1
+#s 1554 3053 227 c {} s false false #000000 E5E2
+#s 1856 3053 228 c {} s false false #000000 E5E3
+#s 2156 3053 229 c {} s false false #000000 E5E4
+#s 2456 3053 230 c {} s false false #000000 E5E5
+#s 2756 3053 231 c {} s false false #000000 E5E6
+#s 3057 3053 232 c {} s false false #000000 E5E7
+#s 1241 3128 233 c {} s false false #000000 E5E8
+#s 1554 3128 234 c {} s false false #000000 E5E9
+#s 1856 3128 235 c {} s false false #000000 E5E10
+#s 2156 3128 236 c {} s false false #000000 E5E11
+#s 2456 3128 237 c {} s false false #000000 E5E12
+#s 3657 947 238 c {} s false false #000000 E5E13
+#s 25 1135 239 c {} s false false #000000 E5E14
+#s 627 2978 240 c {} s false false #000000 E5E15
+#s 25 3203 241 c {} s false false #000000 E5E16
+#s 627 3053 242 c {} s false false #000000 E5E17
+#s 25 3278 243 c {} s false false #000000 E5E18
+#s 1241 3203 244 c {} s false false #000000 E5E19
+#s 1554 3203 245 c {} s false false #000000 E5E20
+#s 1856 3203 246 c {} s false false #000000 E5E21
+#s 2156 3203 247 c {} s false false #000000 E5E22
+#s 2456 3203 248 c {} s false false #000000 E5E23
+#s 2456 3278 249 c {} s false false #000000 E5E24
+#s 2756 3203 250 c {} s false false #000000 E5E25
+#s 3057 3128 251 c {} s false false #000000 E5E27
+#s 3057 3203 252 c {} s false false #000000 E5E28
+#s 3057 3278 253 c {} s false false #000000 E5E29
+#s 3057 3353 254 c {} s false false #000000 E5E30
+#s 3357 3203 255 c {} s false false #000000 E5E31
+#s 3357 3128 256 c {} s false false #000000 E5E32
+#s 3357 3278 257 c {} s false false #000000 E5E33
+#s 3357 3353 258 c {} s false false #000000 E5E34
+#s 3657 3239 259 c {} s false false #000000 E5E35
+#s 4259 772 260 c {} s false false #000000 E5E36
+#s 627 3128 261 c {} s false false #000000 E5E37
+#s 25 3353 262 c {} s false false #000000 E5E38
+#s 327 3203 263 c {} s false false #000000 E5E39
+#s 627 3203 264 c {} s false false #000000 E5E40
+#s 2756 3278 265 c {} s false false #000000 E5E26
+#s 327 3278 266 c {} s false false #000000 E5E41
+#s 627 3278 267 c {} s false false #000000 E5E42
+#s 327 3353 268 c {} s false false #000000 E5E43
+#s 627 3353 269 c {} s false false #000000 E5E44
+#e 0 1 {c7} n #000000 E1E0 E1E1
+#e 0 8 {c4} n #000000 E1E0 E1E8
+#e 0 19 {c7} n #000000 E1E0 E1E19
+#e 1 2 {!c7} n #000000 E1E1 E1E2
+#e 2 3 {c4} n #000000 E1E2 E1E3
+#e 3 4 {!c4} n #000000 E1E3 E1E4
+#e 4 5 {c5} n #000000 E1E4 E1E5
+#e 5 6 {!c5} n #000000 E1E5 E1E6
+#e 6 7 {c6} n #000000 E1E6 E1E7
+#e 8 9 {!c4} n #000000 E1E8 E1E9
+#e 9 10 {c5} n #000000 E1E9 E1E10
+#e 10 11 {!c5} n #000000 E1E10 E1E11
+#e 11 12 {c6} n #000000 E1E11 E1E12
+#e 13 62 {ADMIS} n #000000 E1E13 E2E17
+#e 14 60 {ADMIS} n #000000 E1E14 E2E15
+#e 15 0 {!c6} n #000000 E1E15 E1E0
+#e 16 38 {A3} n #000000 E1E16 E1E39
+#e 17 0 {!c6} n #000000 E1E17 E1E0
+#e 18 41 {A3} n #000000 E1E18 E1E41
+#e 19 20 {!c7} n #000000 E1E19 E1E20
+#e 20 21 {c4} n #000000 E1E20 E1E21
+#e 21 22 {!c4} n #000000 E1E21 E1E22
+#e 22 23 {c5} n #000000 E1E22 E1E23
+#e 22 24 {c8} n #000000 E1E22 E1E24
+#e 23 25 {c8} n #000000 E1E23 E1E25
+#e 24 40 {c5} n #000000 E1E24 E1E26
+#e 25 26 {!c5} n #000000 E1E25 E1E27
+#e 25 27 {!c8} n #000000 E1E25 E1E28
+#e 26 31 {!c8} n #000000 E1E27 E1E32
+#e 27 30 {!c5} n #000000 E1E28 E1E31
+#e 28 32 {!c8} n #000000 E1E29 E1E33
+#e 29 33 {!c5} n #000000 E1E30 E1E34
+#e 30 34 {c6} n #000000 E1E31 E1E35
+#e 31 34 {c6} n #000000 E1E32 E1E35
+#e 32 34 {c6} n #000000 E1E33 E1E35
+#e 33 34 {c6} n #000000 E1E34 E1E35
+#e 35 81 {ADMIS} n #000000 E1E36 E2E37
+#e 36 0 {!c6} n #000000 E1E37 E1E0
+#e 37 43 {A3} n #000000 E1E38 E1E43
+#e 38 39 {!c6} n #000000 E1E39 E1E40
+#e 39 0 {!A3} n #000000 E1E40 E1E0
+#e 40 28 {!c5} n #000000 E1E26 E1E29
+#e 40 29 {!c8} n #000000 E1E26 E1E30
+#e 41 42 {!c6} n #000000 E1E41 E1E42
+#e 42 0 {!A3} n #000000 E1E42 E1E0
+#e 43 44 {!c6} n #000000 E1E43 E1E44
+#e 44 0 {!A3} n #000000 E1E44 E1E0
+#e 45 46 {c7} n #000000 E2E0 E2E1
+#e 45 53 {c4} n #000000 E2E0 E2E8
+#e 45 64 {c7} n #000000 E2E0 E2E19
+#e 46 47 {!c7} n #000000 E2E1 E2E2
+#e 47 48 {c4} n #000000 E2E2 E2E3
+#e 48 49 {!c4} n #000000 E2E3 E2E4
+#e 49 50 {c5} n #000000 E2E4 E2E5
+#e 50 51 {!c5} n #000000 E2E5 E2E6
+#e 51 52 {c6} n #000000 E2E6 E2E7
+#e 52 148 {bouteille} n #000000 E2E7 E3E13
+#e 53 54 {!c4} n #000000 E2E8 E2E9
+#e 54 55 {c5} n #000000 E2E9 E2E10
+#e 55 56 {!c5} n #000000 E2E10 E2E11
+#e 56 57 {c6} n #000000 E2E11 E2E12
+#e 57 194 {bouchon} n #000000 E2E12 E4E14
+#e 60 45 {!c6} n #000000 E2E15 E2E0
+#e 61 83 {A3} n #000000 E2E16 E2E39
+#e 62 45 {!c6} n #000000 E2E17 E2E0
+#e 63 86 {A3} n #000000 E2E18 E2E41
+#e 64 65 {!c7} n #000000 E2E19 E2E20
+#e 65 66 {c4} n #000000 E2E20 E2E21
+#e 66 67 {!c4} n #000000 E2E21 E2E22
+#e 67 68 {c5} n #000000 E2E22 E2E23
+#e 67 69 {c8} n #000000 E2E22 E2E24
+#e 68 70 {c8} n #000000 E2E23 E2E25
+#e 69 85 {c5} n #000000 E2E24 E2E26
+#e 70 71 {!c5} n #000000 E2E25 E2E27
+#e 70 72 {!c8} n #000000 E2E25 E2E28
+#e 71 76 {!c8} n #000000 E2E27 E2E32
+#e 72 75 {!c5} n #000000 E2E28 E2E31
+#e 73 77 {!c8} n #000000 E2E29 E2E33
+#e 74 78 {!c5} n #000000 E2E30 E2E34
+#e 75 79 {c6} n #000000 E2E31 E2E35
+#e 76 79 {c6} n #000000 E2E32 E2E35
+#e 77 79 {c6} n #000000 E2E33 E2E35
+#e 78 79 {c6} n #000000 E2E34 E2E35
+#e 79 215 {assemblage} n #000000 E2E35 E4E36
+#e 81 45 {!c6} n #000000 E2E37 E2E0
+#e 82 88 {A3} n #000000 E2E38 E2E43
+#e 83 84 {!c6} n #000000 E2E39 E2E40
+#e 84 45 {!A3} n #000000 E2E40 E2E0
+#e 85 73 {!c5} n #000000 E2E26 E2E29
+#e 85 74 {!c8} n #000000 E2E26 E2E30
+#e 86 87 {!c6} n #000000 E2E41 E2E42
+#e 87 45 {!A3} n #000000 E2E42 E2E0
+#e 88 89 {!c6} n #000000 E2E43 E2E44
+#e 89 45 {!A3} n #000000 E2E44 E2E0
+#e 90 91 {c7} n #000000 E0E0 E0E1
+#e 90 98 {c4} n #000000 E0E0 E0E8
+#e 90 109 {c7} n #000000 E0E0 E0E19
+#e 91 92 {!c7} n #000000 E0E1 E0E2
+#e 92 93 {c4} n #000000 E0E2 E0E3
+#e 93 94 {!c4} n #000000 E0E3 E0E4
+#e 94 95 {c5} n #000000 E0E4 E0E5
+#e 95 96 {!c5} n #000000 E0E5 E0E6
+#e 96 97 {c6} n #000000 E0E6 E0E7
+#e 97 238 {bouteille} n #000000 E0E7 E5E13
+#e 98 99 {!c4} n #000000 E0E8 E0E9
+#e 99 100 {c5} n #000000 E0E9 E0E10
+#e 100 101 {!c5} n #000000 E0E10 E0E11
+#e 101 102 {c6} n #000000 E0E11 E0E12
+#e 102 14 {bouchon} n #000000 E0E12 E1E14
+#e 105 90 {!c6} n #000000 E0E15 E0E0
+#e 106 128 {A3} n #000000 E0E16 E0E39
+#e 107 90 {!c6} n #000000 E0E17 E0E0
+#e 108 131 {A3} n #000000 E0E18 E0E41
+#e 109 110 {!c7} n #000000 E0E19 E0E20
+#e 110 111 {c4} n #000000 E0E20 E0E21
+#e 111 112 {!c4} n #000000 E0E21 E0E22
+#e 112 113 {c5} n #000000 E0E22 E0E23
+#e 112 114 {c8} n #000000 E0E22 E0E24
+#e 113 115 {c8} n #000000 E0E23 E0E25
+#e 114 130 {c5} n #000000 E0E24 E0E26
+#e 115 116 {!c5} n #000000 E0E25 E0E27
+#e 115 117 {!c8} n #000000 E0E25 E0E28
+#e 116 121 {!c8} n #000000 E0E27 E0E32
+#e 117 120 {!c5} n #000000 E0E28 E0E31
+#e 118 122 {!c8} n #000000 E0E29 E0E33
+#e 119 123 {!c5} n #000000 E0E30 E0E34
+#e 120 124 {c6} n #000000 E0E31 E0E35
+#e 121 124 {c6} n #000000 E0E32 E0E35
+#e 122 124 {c6} n #000000 E0E33 E0E35
+#e 123 124 {c6} n #000000 E0E34 E0E35
+#e 124 260 {assemblage} n #000000 E0E35 E5E36
+#e 126 90 {!c6} n #000000 E0E37 E0E0
+#e 127 133 {A3} n #000000 E0E38 E0E43
+#e 128 129 {!c6} n #000000 E0E39 E0E40
+#e 129 90 {!A3} n #000000 E0E40 E0E0
+#e 130 118 {!c5} n #000000 E0E26 E0E29
+#e 130 119 {!c8} n #000000 E0E26 E0E30
+#e 131 132 {!c6} n #000000 E0E41 E0E42
+#e 132 90 {!A3} n #000000 E0E42 E0E0
+#e 133 134 {!c6} n #000000 E0E43 E0E44
+#e 134 90 {!A3} n #000000 E0E44 E0E0
+#e 135 136 {c7} n #000000 E3E0 E3E1
+#e 135 143 {c4} n #000000 E3E0 E3E8
+#e 135 154 {c7} n #000000 E3E0 E3E19
+#e 136 137 {!c7} n #000000 E3E1 E3E2
+#e 137 138 {c4} n #000000 E3E2 E3E3
+#e 138 139 {!c4} n #000000 E3E3 E3E4
+#e 139 140 {c5} n #000000 E3E4 E3E5
+#e 140 141 {!c5} n #000000 E3E5 E3E6
+#e 141 142 {c6} n #000000 E3E6 E3E7
+#e 143 144 {!c4} n #000000 E3E8 E3E9
+#e 144 145 {c5} n #000000 E3E9 E3E10
+#e 145 146 {!c5} n #000000 E3E10 E3E11
+#e 146 147 {c6} n #000000 E3E11 E3E12
+#e 148 107 {ADMIS} n #000000 E3E13 E0E17
+#e 149 105 {ADMIS} n #000000 E3E14 E0E15
+#e 150 135 {!c6} n #000000 E3E15 E3E0
+#e 151 173 {A3} n #000000 E3E16 E3E39
+#e 152 135 {!c6} n #000000 E3E17 E3E0
+#e 153 176 {A3} n #000000 E3E18 E3E41
+#e 154 155 {!c7} n #000000 E3E19 E3E20
+#e 155 156 {c4} n #000000 E3E20 E3E21
+#e 156 157 {!c4} n #000000 E3E21 E3E22
+#e 157 158 {c5} n #000000 E3E22 E3E23
+#e 157 159 {c8} n #000000 E3E22 E3E24
+#e 158 160 {c8} n #000000 E3E23 E3E25
+#e 159 175 {c5} n #000000 E3E24 E3E26
+#e 160 161 {!c5} n #000000 E3E25 E3E27
+#e 160 162 {!c8} n #000000 E3E25 E3E28
+#e 161 166 {!c8} n #000000 E3E27 E3E32
+#e 162 165 {!c5} n #000000 E3E28 E3E31
+#e 163 167 {!c8} n #000000 E3E29 E3E33
+#e 164 168 {!c5} n #000000 E3E30 E3E34
+#e 165 169 {c6} n #000000 E3E31 E3E35
+#e 166 169 {c6} n #000000 E3E32 E3E35
+#e 167 169 {c6} n #000000 E3E33 E3E35
+#e 168 169 {c6} n #000000 E3E34 E3E35
+#e 170 126 {ADMIS} n #000000 E3E36 E0E37
+#e 171 135 {!c6} n #000000 E3E37 E3E0
+#e 172 178 {A3} n #000000 E3E38 E3E43
+#e 173 174 {!c6} n #000000 E3E39 E3E40
+#e 174 135 {!A3} n #000000 E3E40 E3E0
+#e 175 163 {!c5} n #000000 E3E26 E3E29
+#e 175 164 {!c8} n #000000 E3E26 E3E30
+#e 176 177 {!c6} n #000000 E3E41 E3E42
+#e 177 135 {!A3} n #000000 E3E42 E3E0
+#e 178 179 {!c6} n #000000 E3E43 E3E44
+#e 179 135 {!A3} n #000000 E3E44 E3E0
+#e 180 181 {c7} n #000000 E4E0 E4E1
+#e 180 188 {c4} n #000000 E4E0 E4E8
+#e 180 199 {c7} n #000000 E4E0 E4E19
+#e 181 182 {!c7} n #000000 E4E1 E4E2
+#e 182 183 {c4} n #000000 E4E2 E4E3
+#e 183 184 {!c4} n #000000 E4E3 E4E4
+#e 184 185 {c5} n #000000 E4E4 E4E5
+#e 185 186 {!c5} n #000000 E4E5 E4E6
+#e 186 187 {c6} n #000000 E4E6 E4E7
+#e 188 189 {!c4} n #000000 E4E8 E4E9
+#e 189 190 {c5} n #000000 E4E9 E4E10
+#e 190 191 {!c5} n #000000 E4E10 E4E11
+#e 191 192 {c6} n #000000 E4E11 E4E12
+#e 193 63 {EJECT} n #000000 E4E13 E2E18
+#e 194 61 {EJECT} n #000000 E4E14 E2E16
+#e 195 180 {!c6} n #000000 E4E15 E4E0
+#e 196 218 {A3} n #000000 E4E16 E4E39
+#e 197 180 {!c6} n #000000 E4E17 E4E0
+#e 198 221 {A3} n #000000 E4E18 E4E41
+#e 199 200 {!c7} n #000000 E4E19 E4E20
+#e 200 201 {c4} n #000000 E4E20 E4E21
+#e 201 202 {!c4} n #000000 E4E21 E4E22
+#e 202 203 {c5} n #000000 E4E22 E4E23
+#e 202 204 {c8} n #000000 E4E22 E4E24
+#e 203 205 {c8} n #000000 E4E23 E4E25
+#e 204 220 {c5} n #000000 E4E24 E4E26
+#e 205 206 {!c5} n #000000 E4E25 E4E27
+#e 205 207 {!c8} n #000000 E4E25 E4E28
+#e 206 211 {!c8} n #000000 E4E27 E4E32
+#e 207 210 {!c5} n #000000 E4E28 E4E31
+#e 208 212 {!c8} n #000000 E4E29 E4E33
+#e 209 213 {!c5} n #000000 E4E30 E4E34
+#e 210 214 {c6} n #000000 E4E31 E4E35
+#e 211 214 {c6} n #000000 E4E32 E4E35
+#e 212 214 {c6} n #000000 E4E33 E4E35
+#e 213 214 {c6} n #000000 E4E34 E4E35
+#e 215 82 {EJECT} n #000000 E4E36 E2E38
+#e 216 180 {!c6} n #000000 E4E37 E4E0
+#e 217 223 {A3} n #000000 E4E38 E4E43
+#e 218 219 {!c6} n #000000 E4E39 E4E40
+#e 219 180 {!A3} n #000000 E4E40 E4E0
+#e 220 208 {!c5} n #000000 E4E26 E4E29
+#e 220 209 {!c8} n #000000 E4E26 E4E30
+#e 221 222 {!c6} n #000000 E4E41 E4E42
+#e 222 180 {!A3} n #000000 E4E42 E4E0
+#e 223 224 {!c6} n #000000 E4E43 E4E44
+#e 224 180 {!A3} n #000000 E4E44 E4E0
+#e 225 226 {c7} n #000000 E5E0 E5E1
+#e 225 233 {c4} n #000000 E5E0 E5E8
+#e 225 244 {c7} n #000000 E5E0 E5E19
+#e 226 227 {!c7} n #000000 E5E1 E5E2
+#e 227 228 {c4} n #000000 E5E2 E5E3
+#e 228 229 {!c4} n #000000 E5E3 E5E4
+#e 229 230 {c5} n #000000 E5E4 E5E5
+#e 230 231 {!c5} n #000000 E5E5 E5E6
+#e 231 232 {c6} n #000000 E5E6 E5E7
+#e 233 234 {!c4} n #000000 E5E8 E5E9
+#e 234 235 {c5} n #000000 E5E9 E5E10
+#e 235 236 {!c5} n #000000 E5E10 E5E11
+#e 236 237 {c6} n #000000 E5E11 E5E12
+#e 238 108 {EJECT} n #000000 E5E13 E0E18
+#e 239 106 {EJECT} n #000000 E5E14 E0E16
+#e 240 225 {!c6} n #000000 E5E15 E5E0
+#e 241 263 {A3} n #000000 E5E16 E5E39
+#e 242 225 {!c6} n #000000 E5E17 E5E0
+#e 243 266 {A3} n #000000 E5E18 E5E41
+#e 244 245 {!c7} n #000000 E5E19 E5E20
+#e 245 246 {c4} n #000000 E5E20 E5E21
+#e 246 247 {!c4} n #000000 E5E21 E5E22
+#e 247 248 {c5} n #000000 E5E22 E5E23
+#e 247 249 {c8} n #000000 E5E22 E5E24
+#e 248 250 {c8} n #000000 E5E23 E5E25
+#e 249 265 {c5} n #000000 E5E24 E5E26
+#e 250 251 {!c5} n #000000 E5E25 E5E27
+#e 250 252 {!c8} n #000000 E5E25 E5E28
+#e 251 256 {!c8} n #000000 E5E27 E5E32
+#e 252 255 {!c5} n #000000 E5E28 E5E31
+#e 253 257 {!c8} n #000000 E5E29 E5E33
+#e 254 258 {!c5} n #000000 E5E30 E5E34
+#e 255 259 {c6} n #000000 E5E31 E5E35
+#e 256 259 {c6} n #000000 E5E32 E5E35
+#e 257 259 {c6} n #000000 E5E33 E5E35
+#e 258 259 {c6} n #000000 E5E34 E5E35
+#e 260 127 {EJECT} n #000000 E5E36 E0E38
+#e 261 225 {!c6} n #000000 E5E37 E5E0
+#e 262 268 {A3} n #000000 E5E38 E5E43
+#e 263 264 {!c6} n #000000 E5E39 E5E40
+#e 264 225 {!A3} n #000000 E5E40 E5E0
+#e 265 253 {!c5} n #000000 E5E26 E5E29
+#e 265 254 {!c8} n #000000 E5E26 E5E30
+#e 266 267 {!c6} n #000000 E5E41 E5E42
+#e 267 225 {!A3} n #000000 E5E42 E5E0
+#e 268 269 {!c6} n #000000 E5E43 E5E44
+#e 269 225 {!A3} n #000000 E5E44 E5E0
+Fin du fichier de description de l'automate

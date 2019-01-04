@@ -1,0 +1,116 @@
+toute ligne ne debutant pas par un caractere # est ignoree
+*******************************************************
+fichier de sauvegarde du fichier automate : procede2019
+Date : jeudi 3 janvier 2019 à 21:08:32
+********************************************************
+
+Peut être edite quand le graphe automate n'est pas ouvert dans SEDMA,
+Il est vivement deconseille de modifier ce fichier ! 
+
+#NAME procede2019
+#PROJECT BCI
+#TYPEGRAPHE Automata
+
+debut de la description de l'automate
+
+<s> <int x> <int y> <nom (index)> <ancre> <{attribut}> <ancre> <initial> <final> <couleur> <nom>
+
+#s 780 534 0 c {} s true true #000000 E0
+#s 689 500 1 c {} s false false #000000 E1
+#s 625 480 2 c {} s false false #000000 E2
+#s 553 454 3 c {} s false false #000000 E3
+#s 474 426 4 c {} s false false #000000 E4
+#s 399 403 5 c {} s false false #000000 E5
+#s 329 381 6 c {} s false false #000000 E6
+#s 248 353 7 c {} s false false #000000 E7
+#s 781 613 8 c {} s false false #000000 E8
+#s 779 689 9 c {} s false false #000000 E9
+#s 781 757 10 c {} s false false #000000 E10
+#s 777 833 11 c {} s false false #000000 E11
+#s 776 913 12 c {} s false false #000000 E12
+#s 175 327 13 c {} s false false #000000 E13
+#s 775 1005 14 c {} s false false #000000 E14
+#s 604 790 15 c {} s false false #000000 E15
+#s 952 792 16 c {} s false false #000000 E16
+#s 455 262 17 c {} s false false #000000 E17
+#s 297 478 18 c {} s false false #000000 E18
+#s 867 523 19 c {} s false false #000000 E19
+#s 955 510 20 c {} s false false #000000 E20
+#s 1050 500 21 c {} s false false #000000 E21
+#s 1187 468 22 c {} s false false #000000 E22
+#s 993 419 23 c {} s false false #000000 E23
+#s 1040 602 24 c {} s false false #000000 E24
+#s 1079 339 25 c {} s false false #000000 E25
+#s 1249 380 26 c {} s false false #000000 E27
+#s 1204 285 27 c {} s false false #000000 E28
+#s 1286 472 28 c {} s false false #000000 E29
+#s 1345 553 29 c {} s false false #000000 E30
+#s 1357 278 30 c {} s false false #000000 E31
+#s 1372 343 31 c {} s false false #000000 E32
+#s 1414 404 32 c {} s false false #000000 E33
+#s 1446 468 33 c {} s false false #000000 E34
+#s 1491 324 34 c {} s false false #000000 E35
+#s 1674 276 35 c {} s false false #000000 E36
+#s 1006 205 36 c {} s false false #000000 E37
+#s 1282 747 37 c {} s false false #000000 E38
+#s 898 720 38 c {} s false false #000000 E39
+#s 845 634 39 c {} s false false #000000 E40
+#s 1179 638 40 c {} s false false #000000 E26
+#s 399 568 41 c {} s false false #000000 E41
+#s 550 558 42 c {} s false false #000000 E42
+#s 1110 689 43 c {} s false false #000000 E43
+#s 947 623 44 c {} s false false #000000 E44
+#e 0 1 {c7} n #000000 E0 E1
+#e 1 2 {!c7} n #000000 E1 E2
+#e 2 3 {c4} n #000000 E2 E3
+#e 3 4 {!c4} n #000000 E3 E4
+#e 4 5 {c5} n #000000 E4 E5
+#e 5 6 {!c5} n #000000 E5 E6
+#e 6 7 {c6} n #000000 E6 E7
+#e 0 8 {c4} n #000000 E0 E8
+#e 8 9 {!c4} n #000000 E8 E9
+#e 9 10 {c5} n #000000 E9 E10
+#e 10 11 {!c5} n #000000 E10 E11
+#e 11 12 {c6} n #000000 E11 E12
+#e 7 13 {bouteille} n #000000 E7 E13
+#e 12 14 {bouchon} n #000000 E12 E14
+#e 14 15 {ADMIS} n #000000 E14 E15
+#e 14 16 {EJECT} n #000000 E14 E16
+#e 13 17 {ADMIS} n #000000 E13 E17
+#e 13 18 {EJECT} n #000000 E13 E18
+#e 0 19 {c7} n #000000 E0 E19
+#e 19 20 {!c7} n #000000 E19 E20
+#e 20 21 {c4} n #000000 E20 E21
+#e 21 22 {!c4} n #000000 E21 E22
+#e 22 23 {c5} n #000000 E22 E23
+#e 22 24 {c8} n #000000 E22 E24
+#e 23 25 {c8} n #000000 E23 E25
+#e 24 40 {c5} n #000000 E24 E26
+#e 25 27 {!c8} n #000000 E25 E28
+#e 40 28 {!c5} n #000000 E26 E29
+#e 25 26 {!c5} n #000000 E25 E27
+#e 40 29 {!c8} n #000000 E26 E30
+#e 27 30 {!c5} n #000000 E28 E31
+#e 26 31 {!c8} n #000000 E27 E32
+#e 28 32 {!c8} n #000000 E29 E33
+#e 29 33 {!c5} n #000000 E30 E34
+#e 30 34 {c6} n #000000 E31 E35
+#e 31 34 {c6} n #000000 E32 E35
+#e 32 34 {c6} n #000000 E33 E35
+#e 33 34 {c6} n #000000 E34 E35
+#e 34 35 {assemblage} n #000000 E35 E36
+#e 35 37 {EJECT} n #000000 E36 E38
+#e 35 36 {ADMIS} n #000000 E36 E37
+#e 15 0 {!c6} n #000000 E15 E0
+#e 16 38 {A3} n #000000 E16 E39
+#e 38 39 {!c6} n #000000 E39 E40
+#e 39 0 {!A3} n #000000 E40 E0
+#e 17 0 {!c6} n #000000 E17 E0
+#e 18 41 {A3} n #000000 E18 E41
+#e 41 42 {!c6} n #000000 E41 E42
+#e 42 0 {!A3} n #000000 E42 E0
+#e 36 0 {!c6} n #000000 E37 E0
+#e 37 43 {A3} n #000000 E38 E43
+#e 43 44 {!c6} n #000000 E43 E44
+#e 44 0 {!A3} n #000000 E44 E0
+Fin du fichier de description de l'automate

@@ -1,0 +1,93 @@
+toute ligne ne debutant pas par un caractere # est ignoree
+*******************************************************
+fichier de sauvegarde du fichier automate : objectif2procede2019_P_Trim_moore
+Date : jeudi 3 janvier 2019 à 21:08:32
+********************************************************
+
+Peut être edite quand le graphe automate n'est pas ouvert dans SEDMA,
+Il est vivement deconseille de modifier ce fichier ! 
+
+#NAME objectif2procede2019_P_Trim_moore
+#PROJECT BCI
+#TYPEGRAPHE Automata
+
+debut de la description de l'automate
+
+<s> <int x> <int y> <nom (index)> <ancre> <{attribut}> <ancre> <initial> <final> <couleur> <nom>
+
+#s 700 864 0 c {ADMIS,EJECT} s false false #000000 E0E29
+#s 700 712 1 c {ADMIS,EJECT} s false false #000000 E0E28
+#s 700 939 2 c {ADMIS,EJECT} s false false #000000 E0E30
+#s 1721 654 3 c {ADMIS,EJECT} s false false #000000 E0E12
+#s 822 939 4 c {ADMIS,EJECT} s false false #000000 E0E34
+#s 1549 756 5 c {ADMIS,EJECT} s false false #000000 E0E11
+#s 822 864 6 c {ADMIS,EJECT} s false false #000000 E0E33
+#s 1349 755 7 c {ADMIS,EJECT} s false false #000000 E0E10
+#s 822 787 8 c {ADMIS,EJECT} s false false #000000 E0E32
+#s 822 712 9 c {ADMIS,EJECT} s false false #000000 E0E31
+#s 1440 432 10 c {ADMIS,A3,EJECT} s false false #000000 E0E16E0E39
+#s 1381 246 11 c {ADMIS,EJECT} s false false #000000 E2E13
+#s 944 864 12 c {ADMIS,EJECT} s false false #000000 E0E35
+#s 1628 498 13 c {ADMIS,EJECT} s false false #000000 E2E14
+#s 795 539 14 c {ADMIS,EJECT} s false false #000000 E0E19
+#s 1313 355 15 c {ADMIS,A3,EJECT} s false false #000000 E0E18E0E41
+#s 919 403 16 c {ADMIS,EJECT} s false false #000000 E0E1
+#s 829 336 17 c {ADMIS,EJECT} s false false #000000 E0E2
+#s 455 778 18 c {ADMIS,EJECT} s false false #000000 E0E23
+#s 733 209 19 c {ADMIS,EJECT} s false false #000000 E0E3
+#s 344 817 20 c {ADMIS,EJECT} s false false #000000 E0E22
+#s 833 136 21 c {ADMIS,EJECT} s false false #000000 E0E4
+#s 283 650 22 c {ADMIS,EJECT} s false false #000000 E0E21
+#s 975 66 23 c {ADMIS,EJECT} s false false #000000 E0E5
+#s 395 540 24 c {ADMIS,EJECT} s false false #000000 E0E20
+#s 1188 475 25 c {ADMIS,EJECT} s true true #000000 E0E42E0E40E0E0
+#s 1131 82 26 c {ADMIS,EJECT} s false false #000000 E0E6
+#s 700 787 27 c {ADMIS,EJECT} s false false #000000 E0E27
+#s 1262 144 28 c {ADMIS,EJECT} s false false #000000 E0E7
+#s 577 864 29 c {ADMIS,EJECT} s false false #000000 E0E26
+#s 1222 607 30 c {ADMIS,EJECT} s false false #000000 E0E8
+#s 577 778 31 c {ADMIS,EJECT} s false false #000000 E0E25
+#s 1238 733 32 c {ADMIS,EJECT} s false false #000000 E0E9
+#s 455 853 33 c {ADMIS,EJECT} s false false #000000 E0E24
+#s 1063 729 34 c {ADMIS,EJECT} s false false #000000 E1E36E0E37
+#e 25 16 {c7} n #0000FF E0E42E0E40E0E0 E0E1
+#e 25 30 {c4} n #0000FF E0E42E0E40E0E0 E0E8
+#e 25 14 {c7} n #0000FF E0E42E0E40E0E0 E0E19
+#e 16 17 {!c7} n #0000FF E0E1 E0E2
+#e 17 19 {c4} n #0000FF E0E2 E0E3
+#e 19 21 {!c4} n #0000FF E0E3 E0E4
+#e 21 23 {c5} n #0000FF E0E4 E0E5
+#e 23 26 {!c5} n #0000FF E0E5 E0E6
+#e 26 28 {c6} n #0000FF E0E6 E0E7
+#e 28 11 {bouteille} n #0000FF E0E7 E2E13
+#e 30 32 {!c4} n #0000FF E0E8 E0E9
+#e 32 7 {c5} n #0000FF E0E9 E0E10
+#e 7 5 {!c5} n #0000FF E0E10 E0E11
+#e 5 3 {c6} n #0000FF E0E11 E0E12
+#e 3 13 {bouchon} n #0000FF E0E12 E2E14
+#e 14 24 {!c7} n #0000FF E0E19 E0E20
+#e 24 22 {c4} n #0000FF E0E20 E0E21
+#e 22 20 {!c4} n #0000FF E0E21 E0E22
+#e 20 18 {c5} n #0000FF E0E22 E0E23
+#e 20 33 {c8} n #0000FF E0E22 E0E24
+#e 18 31 {c8} n #0000FF E0E23 E0E25
+#e 33 29 {c5} n #0000FF E0E24 E0E26
+#e 31 27 {!c5} n #0000FF E0E25 E0E27
+#e 31 1 {!c8} n #0000FF E0E25 E0E28
+#e 27 8 {!c8} n #0000FF E0E27 E0E32
+#e 1 9 {!c5} n #0000FF E0E28 E0E31
+#e 0 6 {!c8} n #0000FF E0E29 E0E33
+#e 2 4 {!c5} n #0000FF E0E30 E0E34
+#e 9 12 {c6} n #0000FF E0E31 E0E35
+#e 8 12 {c6} n #0000FF E0E32 E0E35
+#e 6 12 {c6} n #0000FF E0E33 E0E35
+#e 4 12 {c6} n #0000FF E0E34 E0E35
+#e 12 34 {assemblage} n #0000FF E0E35 E1E36E0E37
+#e 34 25 {!c6} n #0000FF E1E36E0E37 E0E42E0E40E0E0
+#e 10 25 {!c6} n #0000FF E0E16E0E39 E0E42E0E40E0E0
+#e 29 0 {!c5} n #0000FF E0E26 E0E29
+#e 29 2 {!c8} n #0000FF E0E26 E0E30
+#e 15 25 {!c6} n #0000FF E0E18E0E41 E0E42E0E40E0E0
+#e 11 15 {} n #0000FF E2E13 E0E18E0E41
+#e 13 10 {} n #0000FF E2E14 E0E16E0E39
+Fin du fichier de description de l'automate

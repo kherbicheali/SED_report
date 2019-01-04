@@ -1,0 +1,32 @@
+toute ligne ne debutant pas par un caractere # est ignoree
+*******************************************************
+fichier de sauvegarde du fichier automate : objectif22
+Date : jeudi 3 janvier 2019 à 21:08:32
+********************************************************
+
+Peut être edite quand le graphe automate n'est pas ouvert dans SEDMA,
+Il est vivement deconseille de modifier ce fichier ! 
+
+#NAME objectif22
+#PROJECT BCI
+#TYPEGRAPHE Automata
+
+debut de la description de l'automate
+
+<s> <int x> <int y> <nom (index)> <ancre> <{attribut}> <ancre> <initial> <final> <couleur> <nom>
+
+#s 527 521 0 c {} s false false #000000 E1
+#s 698 407 1 c {} s false false #000000 E2
+#s 347 402 2 c {} s true true #000000 E0
+#s 525 297 3 c {} s false false #000000 E3
+#s 973 214 4 c {} s false false #000000 E4
+#s 87 203 5 c {} s false false #000000 E5
+#e 2 0 {bouchon} n #000000 E0 E1
+#e 0 1 {ADMIS} n #000000 E1 E2
+#e 1 3 {bouteille} n #000000 E2 E3
+#e 1 4 {assemblage+bouchon} n #000000 E2 E4
+#e 3 2 {ADMIS} n #000000 E3 E0
+#e 2 5 {assemblage+bouteille} n #000000 E0 E5
+#e 5 2 {EJECT} n #000000 E5 E0
+#e 4 1 {EJECT} n #000000 E4 E2
+Fin du fichier de description de l'automate
