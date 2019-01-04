@@ -1,0 +1,184 @@
+\chapter{\textsc{Analyse et modélisation du procédé}}
+\addcontentsline{toc}{chapter}{\textsc{Analyse et modélisation du prodécé}}
+
+	\section{\textsc{Les dispositions possibles des capteurs $C5$ et $C8$}}	
+	\paragraph{} 
+	Comme les deux capteurs $C5$ et $C8$ sont de nature physique différente, les zones respectives dans laquelle ils peuvent détecter une pièce ne sont pas identiques. Cependant, la conception de la maquette fait que ces deux zones se chevauchent. La figure suivante représente les quatres dispositions possibles:
+	
+	\begin{center}
+	\includegraphics[scale=0.4]{c5.png}
+	\captionof{figure}{\textit{Les dispositions possibles des zones de détection des capteurs $C5$ et $C8$}}
+	\label{fig2}
+	\end{center} 
+
+	\paragraph{} Après avoir fait un test, on constate que c'est la première possibilité qui est réalisée sur la maquette. 
+	
+%	\begin{center}
+%	\includegraphics[scale=0.25]{procede.png}
+%	\captionof{figure}{\textit{Les dispositions possibles des zones de détection des capteurs $C5$ et $C8$}}
+%	\label{fig2}
+%	\end{center} 
+%	
+%	\begin{center}
+%	\includegraphics[scale=0.3]{pro.png}
+%	\captionof{figure}{\textit{Les dispositions possibles des zones de détection des capteurs $C5$ et $C8$}}
+%	\label{fig2}
+%	\end{center} 
+
+
+	\section{\textsc{Les séquences possibles}}
+	
+		\paragraph{}
+		Considérons à présent les deux hypothèses énoncées plus haut, voici les séquences possibles pour les pièces $bouchon, bouteille \hspace{1mm} et \hspace{1mm}  assemblage$ :
+		\paragraph{Bouchon :}
+		$C4 \rightarrow \overline{C4} \rightarrow C5 \rightarrow \overline{C5} \rightarrow C6$
+		\paragraph{Bouteille :}
+		$C7 \rightarrow \overline{C7} \rightarrow C4 \rightarrow \overline{C4} \rightarrow C5 \rightarrow 
+		\overline{C5} \rightarrow C6$
+		\paragraph{Assemblage :}
+		$C7 \rightarrow \overline{C7} \rightarrow C4 \rightarrow \overline{C4} \rightarrow   \textbf{[} ( C5 \rightarrow 
+		C8 \rightarrow \overline{C5} \rightarrow \overline{C8}) \vee (C8 \rightarrow 
+		C5 \rightarrow \overline{C8} \rightarrow \overline{C5}) \vee (C5 \rightarrow 
+		C8 \rightarrow \overline{C8} \rightarrow \overline{C5}) \vee ( C8 \rightarrow 
+		C5 \rightarrow \overline{C5} \rightarrow \overline{C8} )\textbf{]} \rightarrow C6$
+				
+		\section{\textsc{L'expression régulière}}
+		
+		 On trouve :\\
+		 $X0 \rightarrow C7X1 + C7X19 + C4X8 + \varepsilon\\
+		 X1 \rightarrow \overline{C7} X2 + \varepsilon\\
+		 X2 \rightarrow C4 X3 + \varepsilon\\
+		 X3 \rightarrow \overline{C4} X4 + \varepsilon\\
+		 X4 \rightarrow C5 X5 + \varepsilon\\
+		 X5 \rightarrow \overline{C5} X6 + \varepsilon\\
+		 X6 \rightarrow C6 X7 + \varepsilon\\
+		 X7 \rightarrow bouteille X13 + \varepsilon\\
+		 X13 \rightarrow ADMIS \hspace{1mm} X17 + EJECT \hspace{1mm} X18 + \varepsilon\\
+		 X17 \rightarrow \overline{C6} X0 + \varepsilon\\
+		 X18 \rightarrow A3 X41 + \varepsilon\\
+		 X41 \rightarrow \overline{C6} X42 + \varepsilon\\
+		 X42 \rightarrow \overline{A3} X0 + \varepsilon\\\\ $
+		 Ou oncore :\\
+		 $X8 \rightarrow \overline{C4} X9 + \varepsilon\\
+		 X9 \rightarrow C5 X10 + \varepsilon\\
+		 X10 \rightarrow \overline{C5} X11 + \varepsilon\\
+		 X11 \rightarrow C6 X12 + \varepsilon\\
+		 X12 \rightarrow bouchon X14 + \varepsilon\\
+		 X14 \rightarrow ADMIS \hspace{1mm} X15 + EJECT \hspace{1mm} X16 + \varepsilon\\
+		 X15 \rightarrow \overline{C6} X0 + \varepsilon\\
+		 X16 \rightarrow A3 X39 + \varepsilon\\
+		 X39 \rightarrow \overline{C6} X40 + \varepsilon\\
+		 X40 \rightarrow \overline{A3} X0 + \varepsilon\\\\ $
+		 Mais aussi : \\
+		 $X19 \rightarrow \overline{C7} X20 + \varepsilon\\
+		 X20 \rightarrow C4 X21 + \varepsilon\\
+		 X21 \rightarrow \overline{C4} X22 + \varepsilon\\
+		 X22 \rightarrow C5 X23 + C8 X24 + \varepsilon\\
+		 X23 \rightarrow C8 X25 + \varepsilon\\
+		 X25 \rightarrow \overline{C5} X27 + \overline{C8} X28 + \varepsilon\\
+		 X27 \rightarrow \overline{C8} X32 + \varepsilon\\
+		 X28 \rightarrow \overline{C5} X31 + \varepsilon\\
+		 X31 \rightarrow C6 X35 + \varepsilon\\
+		 X32 \rightarrow C6 X35 + \varepsilon\\
+		 X24 \rightarrow C5 X26 + \varepsilon\\
+		 X26 \rightarrow \overline{C5} X29 + \overline{C8} X30 + \varepsilon\\
+		 X29 \rightarrow \overline{C8} X33 + \varepsilon\\
+		 X30 \rightarrow \overline{C5} X34 + \varepsilon\\
+		 X33 \rightarrow C6 X35 + \varepsilon\\
+		 X34 \rightarrow C6 X35 + \varepsilon\\
+		 X35 \rightarrow assemblage X36 + \varepsilon\\
+		 X36 \rightarrow ADMIS \hspace{1mm} X37 + EJECT \hspace{1mm} X38 + \varepsilon\\
+		 X37 \rightarrow \overline{C6} X0 + \varepsilon\\
+		 X38 \rightarrow A3 X43 + \varepsilon\\
+		 X43 \rightarrow \overline{C6} X44 + \varepsilon\\
+		 X44 \rightarrow \overline{A3} X0 + \varepsilon\\\\ $
+		 Après réduction on trouve : \\[0.25 cm]
+		 
+		  
+		 $X1 \rightarrow C7 \overline{C7}  C4 \overline{C4} C5 \overline{C5} C6 bouteille( ADMIS \hspace{1mm} \overline{C6} + EJECT \hspace{1mm} A3 \overline{C6} \overline{A3} ) X0\\ 		 
+		 + C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJECT \hspace{1mm} A3 \overline{C6} + EJECT \hspace{1mm} A3 + ADMIS \hspace{1mm} + EJECT \hspace{1mm} ) + C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille + C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 + C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} \\+ C7 \overline{C7} C4 \overline{C4} C5 + C7 \overline{C7} C4 \overline{C4} + C7 \overline{C7} C4 + C7 \overline{C7} + C7 + \varepsilon \\\\ $
+		 
+		 
+		 
+		 $X8 \rightarrow  C4 \overline{C4} C5 \overline{C5} C6 bouchon ( ADMIS \hspace{1mm} \overline{C6} + EJECT A3 \overline {C6A3} )X0 \\		 
+		 + C4 \overline{C4} C5 \overline{C5} C6 bouchon EJECT \hspace{1mm} A3 \overline{C6} + C4 \overline{C4} C5 \overline{C5} C6 bouchon EJECT \hspace{1mm} A3\\ + C4 \overline{C4} C5 \overline{C5} C6 bouchon EJECT \hspace{1mm} + C4 \overline{C4} C5 \overline{C5} C6 bouchon ADMIS \hspace{1mm}\\ + C4 \overline{C4} C5 \overline{C5} C6 bouchon + C4 \overline{C4} C5 \overline{C5} C6 + C4 \overline{C4} C5 \overline{C5} + C4 \overline{C4} C5 + C4 \overline{C4} + C4 + \varepsilon \\\\ $
+		 
+		 
+		 $X19 \rightarrow C7\overline{C7} C4 \overline{C4} [C8C5 ( \overline{C5} \overline{C8} C6 assemblage ( ADMIS \hspace{1mm} \overline{C6} + EJECT \hspace{1mm} A3 \overline{C6A3} ) \\+ \overline{C8} \overline{C8} C6 assemblage ( ADMIS \hspace{1mm} \overline{C6} + EJECT \hspace{1mm} A3 \overline{C6A3} ) ) \\+ C5C8 ( \overline{C8} \overline{C5} C6 assemblage ( ADMIS \hspace{1mm} \overline{C6} + EJECT \hspace{1mm} A3 \overline{C6A3} ) \\+ \overline{C5} \overline{C8} C6 assemblage ( ADMIS \hspace{1mm} \overline{C6} + EJECT \hspace{1mm} A3 \overline{C6A3} ) ) ]
+		  X0 	 + C7\overline{C7}  C4 \overline{C4} C8 C5 ( \overline{C5} + \overline{C8} ) \overline{C8}  C6 assemblage\\ (   EJECT \hspace{1mm}A3 \overline{C6} + EJECT \hspace{1mm} A3 + EJECT \hspace{1mm} + ADMIS ) + C7 \overline{C7}  C4 \overline{C4} C8C5 ( \overline{C5} + \overline{C8} ) \overline{C8} C6 assemblage + C7 \overline{C7}  C4 \overline{C4} C8C5 ( \overline{C5} + \overline{C8} ) \overline{C8} C6 + C7 \overline{C7}  C4 \overline{C4} C8C5 ( \overline{C5} + \overline{C8} ) \overline{C8}  + C7 \overline{C7}  C4 \overline{C4} C8C5 \overline{C5} + C7 \overline{C7}  C4 \overline{C4} C8C5 \overline{C8} + C7 \overline{C7}  C4 \overline{C4} C8C5 + C7 \overline{C7}  C4 \overline{C4} C8 + C7 \overline{C7}  C4 \overline{C4} C5 C8 \overline{C8} \overline{C5} C6 assemblage ( EJECT \hspace{1mm}A3 \overline{C6} + EJECT \hspace{1mm} A3 + EJECT \hspace{1mm} + ADMIS ) + C7 \overline{C7}  C4 \overline{C4} C5C8 \overline{C5} \overline{C8} C6 assemblage ( EJECT \hspace{1mm}A3 \overline{C6} + EJECT \hspace{1mm} A3 + EJECT \hspace{1mm} + ADMIS ) + C7 \overline{C7}  C4 \overline{C4} C5C8 \overline{C8} \overline{C5} C6 assemblage \\+ C7 \overline{C7}  C4 \overline{C4} C5C8 \overline{C5} \overline{C8} C6 assemblage + C7 \overline{C7}  C4 \overline{C4} C5C8  \overline{C8} \overline{C5} C6 \\+ C7 \overline{C7}  C4 \overline{C4} C5C8  \overline{C5} \overline{C8} C6 + C7 \overline{C7}  C4 \overline{C4} C5 C8  \overline{C8} \overline{C5} + C7 \overline{C7}  C4 \overline{C4} C5C8  \overline{C5} \overline{C8} + C7 \overline{C7}  C4 \overline{C4} C5C8  \overline{C8} + C7 \overline{C7}  C4 \overline{C4} C5C8  \overline{C5} + C7 \overline{C7}  C4 \overline{C4} C5C8 + C7 \overline{C7}  C4 \overline{C4} C5 + \overline{C7}  C4 \overline{C4} + C7 \overline{C7}  C4 + C7 \overline{C7}  + C7 + \varepsilon\\\\ $ 
+		 
+		 
+		 Enfin l'expression régulière correspondante s'écrit comme suit : \\
+
+$ER =   \textbf{(} C7 \overline{C7}  C4 \overline{C4} C5 \overline{C5} C6 bouteille( ADMIS \hspace{1mm} \overline{C6} + EJECT \hspace{1mm} A3 \overline{C6} \overline{A3} ) \\+ C7\overline{C7} C4 \overline{C4} [C8C5 ( \overline{C5} \overline{C8} C6 assemblage ( ADMIS \hspace{1mm} \overline{C6} + EJECT \hspace{1mm} A3 \overline{C6A3} ) + \overline{C8} \overline{C8} C6 assemblage ( ADMIS \hspace{1mm} \overline{C6} + EJECT \hspace{1mm} A3 \overline{C6A3} ) ) \\+ C5C8 ( \overline{C8} \overline{C5} C6 assemblage ( ADMIS \hspace{1mm} \overline{C6} + EJECT \hspace{1mm} A3 \overline{C6A3} ) \\+ \overline{C5} \overline{C8} C6 assemblage ( ADMIS \hspace{1mm} \overline{C6} + EJECT \hspace{1mm} A3 \overline{C6A3} ) ) ] \\+ C4 \overline{C4} C5 \overline{C5} C6 bouchon ( ADMIS \hspace{1mm} \overline{C6} + EJECT A3 \overline {C6A3} ) \textbf{)}\textbf{*} \\\\ $
+$\textbf{(}C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJECT \hspace{1mm} A3 \overline{C6} + EJECT \hspace{1mm} A3 + ADMIS \hspace{1mm} + EJECT \hspace{1mm} ) + C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille  \\+ C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 + C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} + C7 \overline{C7} C4 \overline{C4} C5 + C7 \overline{C7} C4 \overline{C4} + C7 \overline{C7} C4 + C7 \overline{C7} + C7 \\+ 
+ C4 \overline{C4} C5 \overline{C5} C6 bouchon EJECT \hspace{1mm} A3 \overline{C6} + C4 \overline{C4} C5 \overline{C5} C6 bouchon EJECT \hspace{1mm} A3\\ + C4 \overline{C4} C5 \overline{C5} C6 bouchon EJECT \hspace{1mm} + C4 \overline{C4} C5 \overline{C5} C6 bouchon ADMIS \hspace{1mm}\\ + C4 \overline{C4} C5 \overline{C5} C6 bouchon + C4 \overline{C4} C5 \overline{C5} C6 + C4 \overline{C4} C5 \overline{C5} + C4 \overline{C4} C5 + C4 \overline{C4} + C4 \\+
+   C7\overline{C7}  C4 \overline{C4} C8 C5 ( \overline{C5} + \overline{C8} ) \overline{C8}  C6 assemblage\\ (   EJECT \hspace{1mm}A3 \overline{C6} + EJECT \hspace{1mm} A3 + EJECT \hspace{1mm} + ADMIS ) + C7 \overline{C7}  C4 \overline{C4} C8C5 ( \overline{C5} + \overline{C8} ) \overline{C8} C6 assemblage + C7 \overline{C7}  C4 \overline{C4} C8C5 ( \overline{C5} + \overline{C8} ) \overline{C8} C6 + C7 \overline{C7}  C4 \overline{C4} C8C5 ( \overline{C5} + \overline{C8} ) \overline{C8}  + C7 \overline{C7}  C4 \overline{C4} C8C5 \overline{C5} + C7 \overline{C7}  C4 \overline{C4} C8C5 \overline{C8} + C7 \overline{C7}  C4 \overline{C4} C8C5 + C7 \overline{C7}  C4 \overline{C4} C8 + C7 \overline{C7}  C4 \overline{C4} C5 C8 \overline{C8} \overline{C5} C6 assemblage ( EJECT \hspace{1mm}A3 \overline{C6} + EJECT \hspace{1mm} A3 + EJECT \hspace{1mm} + ADMIS ) + C7 \overline{C7}  C4 \overline{C4} C5C8 \overline{C5} \overline{C8} C6 assemblage ( EJECT \hspace{1mm}A3 \overline{C6} + EJECT \hspace{1mm} A3 + EJECT \hspace{1mm} + ADMIS ) + C7 \overline{C7}  C4 \overline{C4} C5C8 \overline{C8} \overline{C5} C6 assemblage \\+ C7 \overline{C7}  C4 \overline{C4} C5C8 \overline{C5} \overline{C8} C6 assemblage + C7 \overline{C7}  C4 \overline{C4} C5C8  \overline{C8} \overline{C5} C6 \\+ C7 \overline{C7}  C4 \overline{C4} C5C8  \overline{C5} \overline{C8} C6 + C7 \overline{C7}  C4 \overline{C4} C5 C8  \overline{C8} \overline{C5} + C7 \overline{C7}  C4 \overline{C4} C5C8  \overline{C5} \overline{C8} + C7 \overline{C7}  C4 \overline{C4} C5C8  \overline{C8} + C7 \overline{C7}  C4 \overline{C4} C5C8  \overline{C5} + C7 \overline{C7}  C4 \overline{C4} C5C8 + C7 \overline{C7}  C4 \overline{C4} C5 + \overline{C7}  C4 \overline{C4} + C7 \overline{C7}  C4 + C7 \overline{C7}  + C7 + \varepsilon \textbf{)} \\\\ $
+   
+  \pagebreak
+		 \section{\textsc{Graphe de l'automate (Procédé)}} 
+		 
+		 	\begin{center}
+			\includegraphics[scale=0.25]{procede.png}
+			\captionof{figure}{\textit{Le procédé modélisé sous SEDMA}}
+			\label{fig3}
+			\end{center} 
+	
+	 \pagebreak
+		 \section{\textsc{Modélisation des objectifs}} 
+		 \subsection{\textsc{Premier cahier des charges}} 
+		 
+		 	\begin{center}
+			\includegraphics[scale=0.4]{obj1.png}
+			\captionof{figure}{\textit{Le premier objectif modélisé sous SEDMA}}
+			\label{fig4}
+			\end{center} 
+		
+		 \subsection{\textsc{Second cahier des charges}} 
+		 
+		 	\begin{center}
+			\includegraphics[scale=0.4]{obj2.png}
+			\captionof{figure}{\textit{Le second objectif modélisé sous SEDMA}}
+			\label{fig5}
+			\end{center} 
+			
+	 \pagebreak
+		 \section{\textsc{Le produit parallèle des deux modèles}}
+
+		  \subsection{\textsc{La première commande}}
+		    
+		  \begin{center}
+			\includegraphics[scale=0.2]{com1.png}
+			\captionof{figure}{\textit{La première commande non simplifiée modélisée sous SEDMA}}
+			\label{fig6}
+			\end{center}		    
+		    
+		  \subsection{\textsc{La seconde commande}}
+			
+			\begin{center}
+			\includegraphics[scale=0.07]{com2.png}
+			\captionof{figure}{\textit{La seconde commande non simplifiée modélisée sous SEDMA}}
+			\label{fig7}
+			\end{center}		  
+		  
+		   \pagebreak
+		 \section{\textsc{Simplification des commandes}}
+		 
+		 \par Afin de simplifier les commandes, on doit passer par un $TRIM$ pour ne garder que les états accessibles et les états co-accessibles, il faut aussi transformer la commande en $automate \hspace{1mm} de \hspace{1mm} Moore$ pour que la sortie puisse dépendre de l'état en cours.\\
+		 
+		  \subsection{\textsc{La première commande simplifiée}}
+		  
+		    \begin{center}
+			\includegraphics[scale=0.25]{com1s.png}
+			\captionof{figure}{\textit{La première commande simplifiée modélisée sous SEDMA}}
+			\label{fig8}
+			\end{center}	
+			
+		  \subsection{\textsc{La seconde commande simplifiée}}
+			
+			\begin{center}
+			\includegraphics[scale=0.07]{com2s.png}
+			\captionof{figure}{\textit{La seconde commande simplifiée modélisée sous SEDMA}}
+			\label{fig9}
+			\end{center}	
+		  
