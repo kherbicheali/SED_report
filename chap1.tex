@@ -1,5 +1,5 @@
 \chapter{\textsc{Analyse et modélisation du procédé}}
-\addcontentsline{toc}{chapter}{\textsc{Analyse et modélisation du prodécé}}
+%\addcontentsline{toc}{chapter}{\textsc{Analyse et modélisation du prodécé}}
 
 	\section{\textsc{Les dispositions possibles des capteurs $C5$ et $C8$}}	
 	\paragraph{} 
@@ -13,18 +13,6 @@
 
 	\paragraph{} Après avoir fait un test, on constate que c'est la première possibilité qui est réalisée sur la maquette. 
 	
-%	\begin{center}
-%	\includegraphics[scale=0.25]{procede.png}
-%	\captionof{figure}{\textit{Les dispositions possibles des zones de détection des capteurs $C5$ et $C8$}}
-%	\label{fig2}
-%	\end{center} 
-%	
-%	\begin{center}
-%	\includegraphics[scale=0.3]{pro.png}
-%	\captionof{figure}{\textit{Les dispositions possibles des zones de détection des capteurs $C5$ et $C8$}}
-%	\label{fig2}
-%	\end{center} 
-
 
 	\section{\textsc{Les séquences possibles}}
 	
@@ -123,10 +111,129 @@ $\textbf{(}C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJE
 			\captionof{figure}{\textit{Le procédé modélisé sous SEDMA}}
 			\label{fig3}
 			\end{center} 
+			\paragraph{Remarque :} Pour plus de clarté nous vous conseillons de bien vouloir zoomer sur l'image ou bien de cliquer sur \href{https://github.com/kherbicheali/SED\_report/tree/master/BCI\_SEDMA/}{ce lien github}  contenant notre travail ainsi que tous les graphes faits sous SEDMA. 
 	
+			\section{\textsc{Premier langage marqué reconnu par l'automate}}
+			
+			Pour des états finaux correspondant à l’éjection ou l’admission d’une pièce reconnue (bouchon, bouteille ou assemblage) et un état initial correspondant à un tapis vide, on trouve :\\
+		 $X0 \rightarrow C7X1 + C7X19 + C4X8 \\
+		 X1 \rightarrow \overline{C7} X2\\
+		 X2 \rightarrow C4 X3\\
+		 X3 \rightarrow \overline{C4} X4\\
+		 X4 \rightarrow C5 X5\\
+		 X5 \rightarrow \overline{C5} X6\\
+		 X6 \rightarrow C6 X7\\
+		 X7 \rightarrow bouteille X13\\
+		 X13 \rightarrow ADMIS \hspace{1mm} X17 + EJECT \hspace{1mm} X18\\
+		 X17 \rightarrow  \varepsilon\\
+		 X18 \rightarrow \varepsilon\\
+		 X41 \rightarrow \overline{C6} X42\\
+		 X42 \rightarrow \overline{A3} X0\\\\ $
+		 Ou oncore :\\
+		 $X8 \rightarrow \overline{C4} X9\\
+		 X9 \rightarrow C5 X10\\
+		 X10 \rightarrow \overline{C5} X11\\
+		 X11 \rightarrow C6 X12\\
+		 X12 \rightarrow bouchon X14 + \varepsilon\\
+		 X14 \rightarrow ADMIS \hspace{1mm} X15 + EJECT \hspace{1mm} X16\\
+		 X15 \rightarrow \varepsilon\\
+		 X16 \rightarrow \varepsilon\\
+		 X39 \rightarrow \overline{C6} X40\\
+		 X40 \rightarrow \overline{A3} X0\\\\ $
+		 Mais aussi : \\
+		 $X19 \rightarrow \overline{C7} X20\\
+		 X20 \rightarrow C4 X21\\
+		 X21 \rightarrow \overline{C4} X22\\
+		 X22 \rightarrow C5 X23 + C8 X24 \\
+		 X23 \rightarrow C8 X25\\
+		 X25 \rightarrow \overline{C5} X27 + \overline{C8} X28\\
+		 X27 \rightarrow \overline{C8} X32\\
+		 X28 \rightarrow \overline{C5} X31\\
+		 X31 \rightarrow C6 X35\\
+		 X32 \rightarrow C6 X35\\
+		 X24 \rightarrow C5 X26\\
+		 X26 \rightarrow \overline{C5} X29 + \overline{C8} X30\\
+		 X29 \rightarrow \overline{C8} X33\\
+		 X30 \rightarrow \overline{C5} X34\\
+		 X33 \rightarrow C6 X35\\
+		 X34 \rightarrow C6 X35\\
+		 X35 \rightarrow assemblage X36\\
+		 X36 \rightarrow ADMIS \hspace{1mm} X37 + EJECT \hspace{1mm} X38\\
+		 X37 \rightarrow \varepsilon\\
+		 X38 \rightarrow \varepsilon\\
+		 X43 \rightarrow \overline{C6} X44\\
+		 X44 \rightarrow \overline{A3} X0\\\\ $
+		 
+		 Après réduction on trouve : \\[0.25 cm]
+		 $X1 \rightarrow  \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille EJECT \hspace{1mm} A3 \overline{C6A3} X0 + \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteilleADMIS\\\\ $
+		
+		 %$X8 \rightarrow \overline{C7} X2$
+		 
+		 Enfin l'expression régulière du langage marqué reconnu par l'automate s'écrit comme suit : \\
+		 
+		 
+		 
+		% \pagebreak 
+		 \section{\textsc{Second langage marqué reconnu par l'automate}}
+   		 
+		 Pour des états finaux correspondant uniquement à l’admission d’une pièce reconnue (bouchon, bouteille ou assemblage) et un état initial correspondant à un tapis vide, on trouve :\\
+		 
+		 $X0 \rightarrow C7X1 + C7X19 + C4X8\\
+		 X1 \rightarrow \overline{C7} X2\\
+		 X2 \rightarrow C4 X3\\
+		 X3 \rightarrow \overline{C4} X4\\
+		 X4 \rightarrow C5 X5\\
+		 X5 \rightarrow \overline{C5} X6\\
+		 X6 \rightarrow C6 X7\\
+		 X7 \rightarrow bouteille X13\\
+		 X13 \rightarrow ADMIS \hspace{1mm} X17 + EJECT \hspace{1mm} X18\\
+		 X17 \rightarrow \varepsilon\\
+		 X18 \rightarrow A3 X41\\
+		 X41 \rightarrow \overline{C6} X42\\
+		 X42 \rightarrow \overline{A3} X0\\\\ $
+		 Ou oncore :\\
+		 $X8 \rightarrow \overline{C4} X9\\
+		 X9 \rightarrow C5 X10\\
+		 X10 \rightarrow \overline{C5} X11\\
+		 X11 \rightarrow C6 X12\\
+		 X12 \rightarrow bouchon X14\\
+		 X14 \rightarrow ADMIS \hspace{1mm} X15 + EJECT \hspace{1mm} X16\\
+		 X15 \rightarrow \varepsilon\\
+		 X16 \rightarrow A3 X39\\
+		 X39 \rightarrow \overline{C6} X40\\
+		 X40 \rightarrow \overline{A3} X0\\\\ $
+		 Mais aussi : \\
+		 $X19 \rightarrow \overline{C7} X20\\
+		 X20 \rightarrow C4 X21\\
+		 X21 \rightarrow \overline{C4} X22\\
+		 X22 \rightarrow C5 X23 + C8 X24\\
+		 X23 \rightarrow C8 X25\\
+		 X25 \rightarrow \overline{C5} X27 + \overline{C8} X28\\
+		 X27 \rightarrow \overline{C8} X32\\
+		 X28 \rightarrow \overline{C5} X31\\
+		 X31 \rightarrow C6 X35\\
+		 X32 \rightarrow C6 X35\\
+		 X24 \rightarrow C5 X26\\
+		 X26 \rightarrow \overline{C5} X29 + \overline{C8} X30\\
+		 X29 \rightarrow \overline{C8} X33\\
+		 X30 \rightarrow \overline{C5} X34\\
+		 X33 \rightarrow C6 X35\\
+		 X34 \rightarrow C6 X35\\
+		 X35 \rightarrow assemblage X36\\
+		 X36 \rightarrow ADMIS \hspace{1mm} X37 + EJECT \hspace{1mm} X38\\
+		 X37 \rightarrow \varepsilon\\
+		 X38 \rightarrow A3 X43\\
+		 X43 \rightarrow \overline{C6} X44\\
+		 X44 \rightarrow \overline{A3} X0\\\\ $
+   				
+		Enfin l'expression régulière du langage marqué reconnu par l'automate s'écrit comme suit : \\		
+		
 	 \pagebreak
-		 \section{\textsc{Modélisation des objectifs}} 
-		 \subsection{\textsc{Premier cahier des charges}} 
+
+\chapter{\textsc{Modélisation des objectifs}} 
+%\addcontentsline{toc}{chapter}{\textsc{Modélisation des objectifs}}					 
+		 
+		 \section{\textsc{Premier cahier des charges}} 
 		 
 		 	\begin{center}
 			\includegraphics[scale=0.4]{obj1.png}
@@ -134,7 +241,7 @@ $\textbf{(}C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJE
 			\label{fig4}
 			\end{center} 
 		
-		 \subsection{\textsc{Second cahier des charges}} 
+		 \section{\textsc{Second cahier des charges}} 
 		 
 		 	\begin{center}
 			\includegraphics[scale=0.4]{obj2.png}
@@ -143,9 +250,10 @@ $\textbf{(}C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJE
 			\end{center} 
 			
 	 \pagebreak
-		 \section{\textsc{Le produit parallèle des deux modèles}}
 
-		  \subsection{\textsc{La première commande}}
+\chapter{\textsc{Le produit parallèle des deux modèles}}
+
+		  \section{\textsc{La première commande}}
 		    
 		  \begin{center}
 			\includegraphics[scale=0.2]{com1.png}
@@ -153,7 +261,7 @@ $\textbf{(}C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJE
 			\label{fig6}
 			\end{center}		    
 		    
-		  \subsection{\textsc{La seconde commande}}
+		  \section{\textsc{La seconde commande}}
 			
 			\begin{center}
 			\includegraphics[scale=0.07]{com2.png}
@@ -162,23 +270,28 @@ $\textbf{(}C7 \overline{C7} C4 \overline{C4} C5 \overline{C5} C6 bouteille ( EJE
 			\end{center}		  
 		  
 		   \pagebreak
-		 \section{\textsc{Simplification des commandes}}
+		 \chapter{\textsc{Simplification des commandes}}
 		 
 		 \par Afin de simplifier les commandes, on doit passer par un $TRIM$ pour ne garder que les états accessibles et les états co-accessibles, il faut aussi transformer la commande en $automate \hspace{1mm} de \hspace{1mm} Moore$ pour que la sortie puisse dépendre de l'état en cours.\\
+		  
 		 
-		  \subsection{\textsc{La première commande simplifiée}}
+		  \section{\textsc{La première commande simplifiée}}
 		  
 		    \begin{center}
-			\includegraphics[scale=0.25]{com1s.png}
+			\includegraphics[scale=0.275]{com1s.png}
 			\captionof{figure}{\textit{La première commande simplifiée modélisée sous SEDMA}}
 			\label{fig8}
 			\end{center}	
 			
-		  \subsection{\textsc{La seconde commande simplifiée}}
+		  \section{\textsc{La seconde commande simplifiée}}
 			
 			\begin{center}
-			\includegraphics[scale=0.07]{com2s.png}
+			\includegraphics[scale=0.15]{com2s.png}
 			\captionof{figure}{\textit{La seconde commande simplifiée modélisée sous SEDMA}}
 			\label{fig9}
 			\end{center}	
-		  
+		 
+\chapter*{\textsc{Conclusion}}
+\addcontentsline{toc}{chapter}{\textsc{Conclusion}}
+ 
+ \paragraph{} Cette séance de travaux pratiques nous a initié au logicieLs SEDMA et UNITY et durant ces quatre heure nous avons concrétisé l'étude théorique faite en cours et en travaux dirigés comme contruire un modèle du procédé à base du cahier des charges, définir un objectif et enfin déduire une commande puis la simplifier dans le but  d'extraire son code ST de SEDMA et l'injecter dans UNITY pour ensuite faire marcher la maquette.    
